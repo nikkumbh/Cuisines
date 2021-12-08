@@ -18,13 +18,7 @@ const LoginScreen = () => {
           // onChangeText={text => }
           style={styles.input}
         />
-        <TextInput
-          placeholder="Password"
-          // value= {}
-          // onChangeText={text => }
-          style={styles.input}
-          secureTextEntry
-        />
+
       </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity onPress={() => {}} style={styles.button}>
