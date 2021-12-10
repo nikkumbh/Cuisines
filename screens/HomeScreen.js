@@ -18,7 +18,9 @@ const HomeScreen = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.emailContainer}>Welcome Back: {auth.currentUser?.email} </Text>
+            <View style={styles.emailContainer}>
+            <Text >Welcome Back: {auth.currentUser?.email} </Text>
+            </View>
             <TouchableOpacity style={styles.button} onPress={handleSignOut}
             >
                 <Text style={styles.buttonText}>Sign Out</Text>
@@ -38,8 +40,8 @@ const styles = StyleSheet.create({
     emailContainer:{
         width: '80%',
         padding: 15,
-        alignItems: 'center',
         backgroundColor: '#0782F9',
+        borderRadius: 10,
         color: 'white',
         fontWeight: '700',
         fontSize: 16,
