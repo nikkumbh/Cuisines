@@ -16,11 +16,15 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
-            options={{ headerShown: false }}
+            options={{ headerShown: true }}
             name="Login"
             component={LoginScreen}
           />
-          <Stack.Screen  name="Home"  component={HomeScreen} />
+          <Stack.Screen
+            options={{ headerShown: true }}
+            name="Home"
+            component={HomeScreen}
+          />
         </Stack.Navigator>
         {/* <HomeScreen/> */}
       </NavigationContainer>
@@ -28,4 +32,3 @@ export default function App() {
     </>
   );
 }
-

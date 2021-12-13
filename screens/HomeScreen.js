@@ -4,7 +4,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { auth } from "../firebase";
 import { useNavigation } from "@react-navigation/core";
 import HandlingRapidAPI from "./HandlingRapidApi";
-
+import Cuisines from "./Cuisines";
 const HomeScreen = () => {
   const navigation = useNavigation();
   const handleSignOut = () => {
@@ -30,8 +30,10 @@ const HomeScreen = () => {
         </View>
       </View>
 
-      <View style={styles.cuisineContainer}></View>
-
+      <View style={styles.cuisineContainer}>
+          <Cuisines />
+      </View>
+        
       {/* <HandlingRapidAPI /> */}
     </>
   );
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
     flex: 1,
     // borderColor: "red",
     // borderWidth: 2,
-    backgroundColor: "#FFFDFA",
+    backgroundColor: "#E3F2FD",
   },
   signOutButtonContainer: {
     backgroundColor: "#2196F3",
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
   },
   cuisineContainer: {
     flex: 15,
-    backgroundColor: "#FFFDFA",
+    backgroundColor: "#E3F2FD",
     justifyContent: "center",
     alignItems: "center",
     // borderColor: "green",
