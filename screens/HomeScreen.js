@@ -20,14 +20,13 @@ const HomeScreen = () => {
     <>
       <View style={styles.signOutContainer}>
         <View style={styles.emailContainer}>
-          <Text style={styles.welcomeText}>Welcome: {auth.currentUser?.email} </Text>
+          {/* {auth.currentUser?.email}  */}
+          <Text style={styles.welcomeText}>Welcome</Text>
         </View>
         <View style={styles.signOutButtonContainer}>
-        <TouchableOpacity
-          onPress={handleSignOut}
-        >
-          <Text style={styles.buttonText}>Sign Out</Text>
-        </TouchableOpacity>
+          <TouchableOpacity onPress={handleSignOut}>
+            <Text style={styles.buttonText}>Sign Out</Text>
+          </TouchableOpacity>
         </View>
       </View>
 
@@ -41,40 +40,43 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   signOutContainer: {
     flex: 1,
-    borderColor: "red",
-    borderWidth: 2,
-    backgroundColor: "#282828",
+    // borderColor: "red",
+    // borderWidth: 2,
+    backgroundColor: "#FFFDFA",
   },
   signOutButtonContainer: {
-    backgroundColor: "#0782F9",
+    backgroundColor: "#2196F3",
     width: "20%",
     padding: 10,
     borderRadius: 10,
     alignItems: "center",
-    marginTop: 40,
     position: "absolute",
     right: 5,
     top: 5,
+  },
+  welcomeText: {
+    color: "white",
   },
   buttonText: {
     color: "white",
   },
   cuisineContainer: {
-    backgroundColor: "#282828",
-    flex: 8,
+    flex: 15,
+    backgroundColor: "#FFFDFA",
     justifyContent: "center",
     alignItems: "center",
-    borderColor: "green",
-    borderWidth: 2,
+    // borderColor: "green",
+    // borderWidth: 2,
   },
   emailContainer: {
-    width: "50%",
-    marginTop: 40,
-    padding: 15,
-    backgroundColor: "#0782F9",
+    width: "24%",
+    alignItems: "center",
+    position: "absolute",
+    backgroundColor: "#2196F3",
+    padding: 10,
     borderRadius: 10,
+    position: "absolute",
+    left: 5,
+    top: 5,
   },
-  welcomeText: {
-      color: "white",
-  }
 });

@@ -45,7 +45,7 @@ const LoginScreen = () => {
     <>
       <View style={styles.mainContainer}>
         <View style={styles.logoContainer}>
-          <Text style={styles.logoText}> CUISINE </Text>
+          <Text style={styles.logoText}> CUISINE'S </Text>
         </View>
 
         <KeyboardAvoidingView
@@ -54,13 +54,17 @@ const LoginScreen = () => {
         >
           <View style={styles.inputContainer}>
             <TextInput
+              backgroundColor= 'white'
               placeholder="Email"
               value={email}
               onChangeText={(text) => setEmail(text)}
               style={styles.input}
+              fontSize = '20%'
             />
             <TextInput
+              backgroundColor= 'white'
               placeholder="Password"
+              fontSize = '20%'
               value={password}
               onChangeText={(text) => setPassword(text)}
               style={styles.input}
@@ -88,7 +92,7 @@ export default LoginScreen;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: "#121212",
+    backgroundColor: '#E3F2FD',
     flex: 1,
   },
   logoContainer: {
@@ -96,18 +100,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flex: 2,
-    // borderColor: 'white',
     // borderWidth: 2,
   },
 
   logoText: {
-    color: "white",
+    color: "#121212",
     fontSize: 65,
     letterSpacing: 3,
     textAlign: "justify",
     fontWeight: "300",
   },
-
   container: {
     // backgroundColor: '#121212',
     flex: 4,
@@ -119,13 +121,17 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     width: "80%",
+    height: "20%",
+    
   },
+
   input: {
-    backgroundColor: "white",
+   
     paddingHorizontal: 15,
     paddingVertical: 10,
     borderRadius: 10,
     marginTop: 5,
+    
   },
   buttonContainer: {
     width: "60%",
@@ -134,7 +140,7 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
   button: {
-    backgroundColor: "#0782F9",
+    backgroundColor: "#2196F3",
     width: "100%",
     padding: 15,
     borderRadius: 10,
@@ -142,7 +148,7 @@ const styles = StyleSheet.create({
   buttonOutline: {
     backgroundColor: "white",
     marginTop: 5,
-    borderColor: "#0782F9",
+    borderColor: "#2196F3",
     borderWidth: 2,
   },
   buttonText: {
