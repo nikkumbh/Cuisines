@@ -7,13 +7,13 @@ import LoginScreen from "./screens/LoginScreen";
 import HomeScreen from "./screens/HomeScreen";
 import HandlingGeoLocation from "./screens/HandlingGeoLocation";
 import Test from "./screens/ApiAndLocationConnection";
-
+import ApiAndLocationConnection from './screens/ApiAndLocationConnection'
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <>
-      <NavigationContainer>
+      {/* <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
             options={{ headerShown: true }}
@@ -26,9 +26,9 @@ export default function App() {
             component={HomeScreen}
           />
         </Stack.Navigator>
-        {/* <HomeScreen/> */}
-      </NavigationContainer>
+      </NavigationContainer> */}
       {/* <HandlingGeoLocation /> */}
+    <ApiAndLocationConnection />
     </>
   );
 }

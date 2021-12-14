@@ -63,7 +63,7 @@ const Test = () => {
                 lng : {lng}
             </Text>
             {
-            loading === true ? <Text>loading...</Text> 
+            data==undefined || data.length===0 ? <Text>loading...</Text> 
             : 
             setTimeout(() => {
                 data.slice(0,10).map((item , idx)=>(
