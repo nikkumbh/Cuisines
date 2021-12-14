@@ -9,13 +9,13 @@ const Test = () => {
      const [lat, setLat] = useState("");
      const [lng, setLng] = useState("");
      const [data, setData] = useState([{id: 1, name:'ap'}])
-     const [errorMsg, setErrorMsg] = useState(null);
+     
 
      useEffect(() => {
         (async () => {
           let { status } = await Location.requestForegroundPermissionsAsync();
           if (status !== "granted") {
-            setErrorMsg("Permission to access location was denied");
+            setErr("Permission to access location was denied");
             console.log("xxx");
             return;
           }
@@ -65,15 +65,13 @@ const Test = () => {
             {
             data==undefined || data.length===0 ? <Text>loading...</Text> 
             : 
-            setTimeout(() => {
-                data.slice(0,10).map((item , idx)=>(
-                    <View>
-                    <Text key={idx}>{item.name}
+            // setTimeout(() => {
+                data.map((item , idx)=>(
+                   item.name && <Text key={idx}>{item.name}
                     </Text>
-                    </View>
                 )
             )
-            },2000)     
+            // },2000)     
         }
        </View>
 

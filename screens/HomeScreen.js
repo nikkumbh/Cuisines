@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { auth } from "../firebase";
 import { useNavigation } from "@react-navigation/core";
-import HandlingRapidAPI from "./HandlingRapidApi";
 import Cuisines from "./Cuisines";
+
 const HomeScreen = () => {
   const navigation = useNavigation();
   const handleSignOut = () => {
